@@ -46,10 +46,11 @@ export default function Home() {
            <option className={styles.option}>Francais</option>
            <option className={styles.option}>English</option>
          </select>
+          
+         <Button variant="contained" onClick={() => signIn()} className={styles.btn1}>Sign In</Button>
          Not signed in <br/>
-    <button onClick={() => signIn()}>Sign in</button>
-         <Button variant="contained" className={styles.btn1}>Sign In</Button>
          </div>
+          
        </nav>
        <div className={styles.center}>
         <h1>Unlimited movies, TV<br /> shows, and more.</h1>
