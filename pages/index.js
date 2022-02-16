@@ -11,11 +11,20 @@ import img1 from "../images/img.jpg"
 import img4 from '../images/img4.png'
 import img5 from "../images/img5.png"
 import img6 from "../images/img5.jpg"
-// import "../styles/faq.css"
+import { useSession, signIn, signOut } from "next-auth/react"
+
+
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 export default function Home() {
    
 
+  const { data: session } = useSession()
+  if(session) {
+    return <>
+      Signed in as {session.user.email} <br/>
+      <button onClick={() => signOut()}>Sign out</button>
+    </>
+  }
 
   return (
     <div>
@@ -37,6 +46,8 @@ export default function Home() {
            <option className={styles.option}>Francais</option>
            <option className={styles.option}>English</option>
          </select>
+         Not signed in <br/>
+    <button onClick={() => signIn()}>Sign in</button>
          <Button variant="contained" className={styles.btn1}>Sign In</Button>
          </div>
        </nav>
