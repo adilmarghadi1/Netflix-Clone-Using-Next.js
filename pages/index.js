@@ -44,12 +44,11 @@ export default function Home() {
            <option hidden selected disabled value="0" className={styles.option}>English</option>
            <option className={styles.option}>العربية</option>
            <option className={styles.option}>Francais</option>
-           
+
            <option className={styles.option}>English</option>
          </select>
           
          <Button variant="contained" onClick={() => signIn()} className={styles.btn1}>Sign In</Button>
-         Not signed in <br/>
          </div>
           
        </nav>
