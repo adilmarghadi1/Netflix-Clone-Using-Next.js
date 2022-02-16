@@ -174,3 +174,104 @@
 .image {
     width: 100px;
 }
+
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    background-color: #000000;
+    border-bottom: 8px solid #222222;
+    padding-top: 96px;
+    padding-bottom: 36px;
+}
+
+
+
+.box1 h1 {
+    font-size: 3.1em;
+    color: #FFFF;
+    padding-left: 100px;
+    padding-bottom: 20px;
+}
+
+.box1 p {
+    color:#FFFF;
+    width: 60%;
+    font-size: 1.5em;
+    padding-left: 100px;
+}
+
+.box2 {
+    padding-right: 100px;
+    /* width: 40%; */
+}
+
+.box2 image {
+    width: 300px;
+}
+
+@media screen and (max-width:1150px) {
+    .container {
+        flex-wrap: wrap;
+    }
+
+    .box1 h1 {
+    text-align: center;
+    padding-left: 0;
+}
+
+.box1 p {
+    text-align: center;
+    padding-left: 0;
+    width: 99%;
+}
+
+.box2 image{
+    display: block;
+    margin: 140px auto;
+    width: 100%;
+    padding-right: 0;
+    padding-left:0;
+}
+
+}
+
+
+@media screen and (max-width:1150px) {
+    .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .box2  {
+        display: grid;
+        place-items: center;
+        margin: 30px auto;
+        width: 100%;
+        margin-right: 0;
+        padding-right: 0;
+        order: 1;
+    }
+    .box1 {
+        order: 2;
+    }
+}
+
+
+.container2 {
+    background-color: #000000;
+    border-bottom: 8px solid #222222;
+}
+
+.container2 h1{
+    text-align: center;
+    color:#FFFFFF;
+    font-size:1.2em;
+    letter-spacing: 1.4;
+    font-weight: 200;
+    padding-top: 60px;
+    margin-bottom: 50px;
+}
+
+
