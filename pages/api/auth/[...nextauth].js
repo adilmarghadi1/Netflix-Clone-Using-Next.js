@@ -1,9 +1,8 @@
 import NextAuth from 'next-auth'
-import EmailProvider from 'next-auth/providers/email'
 import GitHubProvider from "next-auth/providers/github";
 
 export default NextAuth({
-    // OAuth authentication providers...
+
     
     providers: [
         GitHubProvider({
